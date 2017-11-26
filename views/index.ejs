@@ -1,0 +1,41 @@
+<% include ./partials/header.ejs %>
+
+<div class="ui main text container blue inverted segment">
+    <div class="ui huge header">Beer Me!</div>
+        <div class="ui top attached blue segment">
+            <div class="ui divided items">
+                <% beers.forEach( (beer) => { %>
+                    <div class="item bordered segment">
+                        <div class="image">
+                            <img src="<%= beer.image %>">
+                        </div>
+                        <div class="content">
+                            <a class="third header" href="/beers/<%= beer._id %>"><%= beer.name %></a>
+                            <div class="meta">
+                                <h3><%= beer.brewery %></h3>
+                                <h4><%= beer.location %></h4>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    <% for (i = 0; i < 10; i++) { %>
+                                            <% if (i < (beer.rating - 0.5)) { %>
+                                            <i class="star icon"></i>
+                                            <% } else { %>
+                                            <i class="empty star icon"></i>
+                                            <% } %>
+                                    <% } %>
+                                </p>     
+                            </div>
+                            <div class="extra">
+                                <h5><%= beer.style %></h5>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %>
+

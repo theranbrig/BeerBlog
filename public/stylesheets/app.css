@@ -1,0 +1,16 @@
+.bottomInfo {
+    margin-top: 40px 0;
+    padding: 20px 0;
+}
+
+.container.main {
+    margin-top: 4em;
+}
+ 
+#delete {
+    display: inline;
+}
+
+.beerInfo {
+    padding: 20px 0;
+}

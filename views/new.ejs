@@ -1,0 +1,38 @@
+<% include ./partials/header.ejs %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Submit New Beer Review</div>
+    <form class="ui form" action="/beers" method="POST">
+        <div class="field">
+            <label>Beer Name</label>
+            <input type="text" name="beer[name]">
+        </div>
+        <div class="field">
+            <label>Brewery Name</label>
+            <input type="text" name="beer[brewery]">        
+        </div>
+        <div class="field">
+            <label>Brewery Location</label>
+            <input type="text" name="beer[location]">    
+        </div>
+        <div class="field">
+            <label>Image URL</label>
+            <input type="text" name="beer[image]">
+        </div>
+        <div class="field">
+            <label>Beer Style</label>
+            <input type="text" name="beer[style]">
+        </div>
+        <div class="field">
+            <label>Beer Review</label>
+            <textarea name="beer[review]"></textarea>
+        </div>
+        <div class="field">
+            <label>Rating (Out of 10 - Whole Numbers Only)</label>
+            <input name="beer[rating]"></input>
+        </div>
+        <button class="ui blue inverted button" type="submit">Submit</button>
+    </form>
+</div>
+
+<% include ./partials/footer.ejs %>
